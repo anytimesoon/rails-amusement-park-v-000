@@ -1,0 +1,15 @@
+<%= content_tag(:div, flash[:notice]) if flash[:notice] %>
+
+<h1><%= @user.name %></h1>
+
+<h2><%= admin_header %><h2>
+
+<p>Height: <%= @user.height %></p>
+<p>Happiness: <%= @user.happiness %></p>
+<p>Nausea: <%= @user.nausea %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Mood: <%= @user.mood %></p>
+
+<h3>Rides</h3>
+
+<%= link_to "See attractions", attractions_path %>

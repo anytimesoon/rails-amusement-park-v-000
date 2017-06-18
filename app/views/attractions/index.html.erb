@@ -1,0 +1,14 @@
+<h1>Attractions</h1>
+
+<% if @user %>
+	<%= link_to "New Attraction", new_attraction_path %>
+<% end %>
+
+
+<% @attractions.each do |attraction| %>
+
+	<div>
+		Name - <%= attraction.name %> | <%= link_to show_attraction_link_text(@user, attraction), attraction_path(attraction) %>
+	</div>	
+
+<% end %>
